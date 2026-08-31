@@ -1,7 +1,6 @@
-import { Request, Response } from "express";
-import fibonacci from "./fib";
+const fibonacci = require("./fib");
 
-export default (req: Request, res: Response): void => {
+export default (req: any, res: any): void => {
   const { num } = req.params;
 
   const fibN = fibonacci(parseInt(num, 10));
